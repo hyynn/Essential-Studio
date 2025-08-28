@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;font-family: 'Pretendard-Regular';font-size: 16px;line-height: 1.4;letter-spacing: -0.025em;}
+img {vertical-align: top; border: 0;}
+table {border-collapse: collapse;}
+caption {width: 0; height: 0; overflow: hidden; font-size: 0; text-indent: -9999px; position: absolute; left: -9999px; color: transparent;}
+html, body {height: 100%;}
+input, fieldset {outline: 0; border: 0;}
+button {background: none; border: 0; cursor: pointer;}
+label {cursor: pointer;}
+body {font-family: 'Pretendard-Regular';font-size: 16px;color: #333;line-height: 1.4;letter-spacing: -0.03em;}
+
+.autoH:after {content: ""; display: block; clear: both;}
