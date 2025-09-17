@@ -217,6 +217,11 @@ header .topmenu a:nth-child(1)::after {
 .section1 .centerbox .part1_slidebox .swiper-slide .text .title {
   font-size: 22px;
 }
+.section1 .centerbox .part1_slidebox .swiper-slide .text .title .category {
+  font-size: 16px;
+  color: #505050;
+  margin-left: 5px;
+}
 .section1 .centerbox .part1_slidebox .swiper-slide .text .detail {
   font-size: 18px;
   line-height: 1.3;
