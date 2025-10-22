@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: #EFF1F8;
   overflow-x: hidden;
 }
 
@@ -29,6 +29,9 @@ header .pc_nav .gnb li a {
 }
 header .topmenu {
   display: flex;
+}
+header .topmenu .search {
+  font-weight: bold;
 }
 header .topmenu a {
   font-size: 1.6rem;
@@ -148,7 +151,7 @@ header .topmenu a:nth-child(1)::after {
   padding: 15rem 0;
 }
 .section_box > section {
-  margin-bottom: 15rem;
+  padding: 15rem 0;
 }
 
 .section1 .centerbox {
@@ -217,13 +220,6 @@ header .topmenu a:nth-child(1)::after {
   margin-top: 5px;
 }
 
-.section2 h2 {
-  font-family: "Pretendard-Medium";
-  font-size: 3rem;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 50px;
-}
 .section2 .content_box {
   display: flex;
   justify-content: space-between;
@@ -282,6 +278,7 @@ header .topmenu a:nth-child(1)::after {
   display: flex;
   align-items: center;
   height: 717px;
+  margin: 10rem 0;
 }
 .section3 .big_img {
   position: absolute;
@@ -378,10 +375,10 @@ footer {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  font-size: 1.4rem;
 }
 footer .info_box {
-  text-indent: 3px;
-  margin-left: 3.2rem;
+  margin-left: 3rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -391,6 +388,375 @@ footer .info_box ul {
   display: flex;
   gap: 20px;
 }
+footer .info_box ul a {
+  font-size: 1.4rem;
+}
 footer .info_box ul:last-child {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1324px) {
+  .visual .centerbox .textbox strong {
+    font-size: clamp(4rem, 4.6vw, 7.8rem);
+  }
+  .section2 .centerbox .content {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .section2 .centerbox .content li {
+    display: flex;
+    align-items: center;
+  }
+  .section2 .centerbox .content li img {
+    width: clamp(200px, 18.75vw, 360px);
+  }
+  .section2 .centerbox .content li:first-child {
+    top: 0;
+  }
+  .section2 .centerbox .content .textbox {
+    font-size: clamp(1.6rem, 1.04vw, 2rem);
+  }
+  .section2 .centerbox .content .textbox h3 {
+    font-size: clamp(3rem, 2.6vw, 5rem);
+  }
+}
+@media (max-width: 1024px) {
+  .centerbox {
+    padding: 0 30px;
+  }
+  header .pc_nav .gnb li a {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    padding: 1.85em 1.5em;
+  }
+  header .topmenu a {
+    font-size: clamp(1.4rem, 1.8vw, 1.6rem);
+  }
+  .search_box {
+    width: clamp(500px, 70vw, 700px);
+  }
+  .visual .centerbox .textbox {
+    transform: translate(-40vw, -50%);
+    gap: 2em;
+  }
+  .visual .centerbox .textbox strong {
+    font-size: clamp(4rem, 6vw, 8rem);
+  }
+  .visual .centerbox .textbox .detail p {
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+  }
+  .section1 .centerbox {
+    height: auto;
+    gap: 3rem;
+  }
+  .section1 .centerbox .textbox {
+    position: relative;
+  }
+  .section1 .centerbox .textbox h2 {
+    font-size: clamp(3rem, 4vw, 5rem);
+  }
+  .section1 .centerbox .part1_slidebox {
+    width: 100%;
+    position: relative;
+    left: -10rem;
+  }
+  .section2 .content_box {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .section2 .content_box .textbox {
+    width: 100%;
+  }
+  .section2 .content_box .textbox .text_b {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section2 .content_box .textbox h3 {
+    font-size: clamp(3rem, 4.5vw, 5rem);
+    text-align: center;
+  }
+  .section2 .content_box .textbox p {
+    width: 100%;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    text-align: center;
+  }
+  .section2 .content_box .textbox .btn_box {
+    margin-top: 1rem;
+  }
+  .section2 .content_box .textbox .btn_box .btn {
+    margin-top: 1rem;
+  }
+  .section2 .content_box .content {
+    justify-content: center;
+  }
+  .section2 .content_box .content li:first-child {
+    top: 0;
+  }
+  .section2 .content_box .content li img {
+    max-width: clamp(280px, 40vw, 360px);
+  }
+  .section3 {
+    height: auto;
+    padding: 5rem 0;
+  }
+  .section3 .big_img {
+    width: clamp(600px, 44.58vw, 856px);
+    height: auto;
+  }
+  .section3 .centerbox {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .section3 .centerbox .part2_slidebox {
+    max-width: 100%;
+  }
+  .section3 .centerbox .part2_slidebox .btn_box {
+    left: 70%;
+  }
+  .section3 .centerbox .textbox {
+    width: 100%;
+    text-align: start;
+  }
+  .section3 .centerbox .textbox h2 {
+    font-size: clamp(3rem, 4vw, 4.8rem);
+  }
+  .section3 .centerbox .textbox p {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    text-align: start;
+  }
+  .section3 .centerbox .textbox .btn_box {
+    text-align: start;
+  }
+  .section3 .centerbox .part2_slidebox {
+    width: 60%;
+  }
+  .section3 .centerbox .part2_slidebox .swiper-slide img {
+    width: 100%;
+  }
+  .section4 h2 {
+    font-size: clamp(2.4rem, 3vw, 3rem);
+  }
+  .section4 .content {
+    justify-content: center;
+  }
+  .section4 .content li img {
+    width: clamp(200px, 20.8vw, 360px);
+  }
+  footer {
+    height: auto;
+    padding: 40px 30px;
+  }
+  footer .info_box ul {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .centerbox {
+    padding: 0 20px;
+  }
+  header .centerbox {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  header .pc_nav .gnb {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .pc_nav .gnb li a {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    padding: 1em 1.5em;
+  }
+  header .topmenu {
+    width: 100%;
+    justify-content: center;
+  }
+  header .topmenu a {
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+  }
+  .search_box {
+    width: clamp(300px, 90vw, 700px);
+    height: 60px;
+  }
+  .search_box input {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+  }
+  .search_box button {
+    width: 60px;
+  }
+  .btn_close {
+    right: -30px;
+    top: -40px;
+    width: 35px;
+    height: 35px;
+  }
+  .visual .centerbox .textbox {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 90%;
+    gap: 1.5em;
+  }
+  .visual .centerbox .textbox strong {
+    font-size: clamp(3rem, 6vw, 6rem);
+  }
+  .visual .centerbox .textbox .detail {
+    gap: 1.5em;
+  }
+  .visual .centerbox .textbox .detail p {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    padding-left: 0;
+  }
+  .section_box {
+    padding: 8rem 0;
+  }
+  .section_box > section {
+    padding: 8rem 0;
+  }
+  .section1 .centerbox .textbox {
+    padding: 2rem;
+  }
+  .section1 .centerbox .textbox h2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+  }
+  .section1 .centerbox .textbox .btn_box {
+    justify-content: center;
+  }
+  .section1 .centerbox .textbox .btn_box > span img {
+    width: clamp(40px, 8vw, 60px);
+  }
+  .section1 .centerbox .part1_slidebox .swiper-slide .text .title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+  }
+  .section1 .centerbox .part1_slidebox .swiper-slide .text .title .category {
+    font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+  }
+  .section1 .centerbox .part1_slidebox .swiper-slide .text .detail {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  }
+  .section2 .content_box .textbox {
+    text-align: center;
+  }
+  .section2 .content_box .textbox h3 {
+    font-size: clamp(2.8rem, 6vw, 4rem);
+  }
+  .section2 .content_box .textbox .text_b {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section2 .content_box .textbox p {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    text-align: center;
+  }
+  .section2 .content_box .textbox .btn_box .btn {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    padding: 12px 18px;
+  }
+  .section2 .content_box .content li img {
+    max-width: clamp(200px, 60vw, 320px);
+  }
+  .section3 {
+    margin: 5rem 0;
+  }
+  .section3 .big_img {
+    width: 100%;
+    height: clamp(400px, 60vh, 600px);
+    position: relative;
+  }
+  .section3 .centerbox .part2_slidebox .btn_box {
+    left: 60%;
+    top: 85%;
+  }
+  .section3 .centerbox .part2_slidebox .btn_box > span {
+    width: clamp(50px, 10vw, 68px);
+    height: clamp(50px, 10vw, 68px);
+  }
+  .section3 .centerbox .part2_slidebox .btn_box > span img {
+    width: 60%;
+  }
+  .section3 .centerbox .textbox {
+    text-align: start;
+  }
+  .section3 .centerbox .textbox h2 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+  }
+  .section3 .centerbox .textbox p {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    text-align: start;
+  }
+  .section3 .centerbox .btn_box {
+    margin-top: 30px;
+  }
+  .section3 .centerbox .btn_box .btn {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    padding: 12px 18px;
+  }
+  .section3 .centerbox .part2_slidebox {
+    width: 40%;
+  }
+  .section3 .centerbox .part2_slidebox .swiper-slide img {
+    width: 100%;
+  }
+  .section3 .centerbox .part2_slidebox .btn_box {
+    left: 80%;
+    top: 74%;
+    gap: 1.4rem;
+  }
+  .section3 .centerbox .part2_slidebox .btn_box span {
+    width: 40px;
+    height: 40px;
+  }
+  .section4 h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 3rem;
+  }
+  .section4 .content {
+    align-items: center;
+  }
+  .section4 .content li {
+    width: 100%;
+    max-width: 300px;
+  }
+  .section4 .content li img {
+    width: clamp(200px, 20.8vw, 360px);
+  }
+  .section4 footer {
+    padding: 30px 20px;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+  }
+  .section4 footer h1 img {
+    max-width: 150px;
+  }
+  .section4 footer .info_box {
+    margin-left: 0;
+    margin-top: 2rem;
+    gap: 6px;
+  }
+  .section4 footer .info_box ul {
+    gap: 1rem;
+    text-align: center;
+  }
+  .section4 footer .info_box ul li {
+    text-indent: 2rem;
+  }
+  .section4 footer .info_box ul a {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+  }
+  .section4 footer .info_box ul:last-child {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 480px) {
+  .visual .centerbox .textbox strong {
+    font-size: clamp(2.4rem, 7vw, 4rem);
+  }
+  .visual .centerbox .textbox .detail p {
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+  }
+  .section1 .centerbox .textbox h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  .section3 .centerbox .part2_slidebox .btn_box {
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=main.css.map */

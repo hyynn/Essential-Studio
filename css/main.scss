@@ -1,5 +1,5 @@
 body {
-    background: #fafafa;
+    background: #EFF1F8;
     overflow-x: hidden;
 }
 
@@ -21,7 +21,6 @@ header {
         align-items: center;
     }
 
-    h1 {}
 
     .pc_nav {
         .gnb {
@@ -40,6 +39,10 @@ header {
 
     .topmenu {
         display: flex;
+
+        .search {
+            font-weight: bold;
+        }
 
         a {
             font-size: 1.6rem;
@@ -193,7 +196,7 @@ header {
     padding: 15rem 0;
 
     >section {
-        margin-bottom: 15rem;
+        padding: 15rem 0;
     }
 }
 
@@ -278,13 +281,13 @@ header {
 }
 
 .section2 {
-    h2 {
-        font-family: 'Pretendard-Medium';
-        font-size: 3rem;
-        font-weight: normal;
-        text-align: center;
-        margin-bottom: 50px;
-    }
+    // h2 {
+    //     font-family: 'Pretendard-Medium';
+    //     font-size: 3rem;
+    //     font-weight: normal;
+    //     text-align: center;
+    //     margin-bottom: 50px;
+    // }
 
     .content_box {
         display: flex;
@@ -359,6 +362,7 @@ header {
     display: flex;
     align-items: center;
     height: 717px;
+    margin: 10rem 0;
 
     .big_img {
         position: absolute;
@@ -476,10 +480,10 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    font-size: 1.4rem;
 
     .info_box {
-        text-indent: 3px;
-        margin-left: 3.2rem;
+        margin-left: 3rem;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -489,10 +493,523 @@ footer {
             display: flex;
             gap: 20px;
 
+            a {
+                font-size: 1.4rem;
+            }
+
             &:last-child {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
         }
     }
 
 }
+
+// 반응형 미디어 쿼리
+@media (max-width: 1324px) {
+    .visual .centerbox .textbox strong {
+        font-size: clamp(4rem, 4.6vw, 7.8rem);
+    }
+
+    .section2 {
+        .centerbox .content {
+            display: flex;
+            gap: 1.5rem;
+            li {
+                display: flex;align-items: center;
+                img {
+                    width: clamp(200px, 18.75vw, 360px);
+                }
+            }
+            li:first-child {top: 0;}
+
+            .textbox {
+                font-size: clamp(1.6rem, 1.04vw, 2rem);
+                h3 {font-size: clamp(3rem, 2.6vw, 5rem);}
+            }
+            
+        }
+    }
+}
+
+// 태블릿 (768px ~ 1024px)
+@media (max-width: 1024px) {
+
+    .centerbox {
+        padding: 0 30px;
+    }
+
+    header {
+        .pc_nav .gnb li a {
+            font-size: clamp(1.6rem, 2vw, 2rem);
+            padding: 1.85em 1.5em;
+        }
+
+        .topmenu a {
+            font-size: clamp(1.4rem, 1.8vw, 1.6rem);
+        }
+    }
+
+    .search_box {
+        width: clamp(500px, 70vw, 700px);
+    }
+
+    .visual {
+        .centerbox .textbox {
+            transform: translate(-40vw, -50%);
+            gap: 2em;
+
+            strong {
+                font-size: clamp(4rem, 6vw, 8rem);
+            }
+
+            .detail p {
+                font-size: clamp(1.6rem, 2vw, 2.2rem);
+            }
+        }
+    }
+
+    .section1 {
+        .centerbox {
+            height: auto;
+            // flex-direction: column;
+            gap: 3rem;
+
+            .textbox {
+                position: relative;
+
+                h2 {
+                    font-size: clamp(3rem, 4vw, 5rem);
+                }
+            }
+
+            .part1_slidebox {
+                width: 100%;
+                position: relative;
+                left: -10rem;
+            }
+        }
+    }
+
+    .section2 {
+        .content_box {
+            flex-direction: column;
+            gap: 5rem;
+
+            .textbox {
+                width: 100%;
+
+                .text_b {text-align: center; margin-bottom: 1rem;}
+
+                h3 {
+                    font-size: clamp(3rem, 4.5vw, 5rem);
+                    text-align: center;
+                
+                }
+
+                p {
+                    width: 100%;
+                    font-size: clamp(1.6rem, 2vw, 2rem);
+                    text-align: center;
+                }
+                .btn_box {margin-top: 1rem;
+                    .btn {margin-top: 1rem;}
+                }
+            }
+
+            .content {
+                justify-content: center;
+
+                li:first-child {
+                    top: 0;
+                }
+
+                li img {
+                    max-width: clamp(280px, 40vw, 360px);
+                }
+            }
+        }
+    }
+
+    .section3 {
+        height: auto;
+        padding: 5rem 0;
+
+        .big_img {
+            width: clamp(600px, 44.58vw, 856px);
+            height: auto;
+        }
+
+        .centerbox {
+            flex-direction: column;
+            gap: 4rem;
+
+            .part2_slidebox {
+                max-width: 100%;
+
+                .btn_box {
+                    left: 70%;
+                }
+            }
+
+            .textbox {
+                width: 100%;
+                text-align: start;
+
+                h2 {
+                    font-size: clamp(3rem, 4vw, 4.8rem);
+                }
+
+                p {
+                    font-size: clamp(1.6rem, 2vw, 2rem);
+                    text-align: start;
+                }
+
+                .btn_box {text-align: start;}
+            }
+            
+        
+            .part2_slidebox {
+                width: 60%;
+                .swiper-slide img {width: 100%;}
+        }
+
+
+        }
+    }
+
+    .section4 {
+        h2 {
+            font-size: clamp(2.4rem, 3vw, 3rem);
+        }
+
+        .content {
+            justify-content: center;
+
+            li {
+                img {width: clamp(200px, 20.8vw, 360px );
+            }
+
+            }
+        }
+    }
+
+    footer {
+        height: auto;
+        padding: 40px 30px;
+
+        .info_box {
+            ul {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+
+// 모바일 (~ 768px)
+@media (max-width: 768px) {
+    .centerbox {
+        padding: 0 20px;
+    }
+
+    header {
+        .centerbox {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .pc_nav .gnb {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li a {
+                font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                padding: 1em 1.5em;
+            }
+        }
+
+        .topmenu {
+            width: 100%;
+            justify-content: center;
+
+            a {
+                font-size: clamp(1.4rem, 2vw, 1.6rem);
+            }
+        }
+    }
+
+    .search_box {
+        width: clamp(300px, 90vw, 700px);
+        height: 60px;
+
+        input {
+            font-size: clamp(1.4rem, 2vw, 1.8rem);
+        }
+
+        button {
+            width: 60px;
+        }
+    }
+
+    .btn_close {
+        right: -30px;
+        top: -40px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .visual {
+        .centerbox .textbox {
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 90%;
+            gap: 1.5em;
+
+            strong {
+                font-size: clamp(3rem, 6vw, 6rem);
+            }
+
+            .detail {
+                gap: 1.5em;
+
+                p {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .section_box {
+        padding: 8rem 0;
+
+        > section {
+            padding: 8rem 0;
+        }
+    }
+
+    .section1 {
+        .centerbox {
+            .textbox {
+                padding: 2rem;
+
+                h2 {
+                    font-size: clamp(2.4rem, 5vw, 4rem);
+                }
+
+                .btn_box {
+                    justify-content: center;
+
+                    > span img {
+                        width: clamp(40px, 8vw, 60px);
+                    }
+                }
+            }
+
+            .part1_slidebox {
+                .swiper-slide {
+                    .text {
+                        .title {
+                            font-size: clamp(1.6rem, 3vw, 2.2rem);
+
+                            .category {
+                                font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+                            }
+                        }
+
+                        .detail {
+                            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .section2 {
+        .content_box {
+            .textbox {
+                text-align: center;
+
+                h3 {
+                    font-size: clamp(2.8rem, 6vw, 4rem);
+                }
+
+                .text_b {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    text-align: center;
+                }
+
+                .btn_box .btn {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    padding: 12px 18px;
+                }
+            }
+
+            .content {
+                li img {
+                    max-width: clamp(200px, 60vw, 320px);
+                }
+            }
+        }
+    }
+
+    .section3 {
+        margin: 5rem 0;
+
+        .big_img {
+            width: 100%;
+            height: clamp(400px, 60vh, 600px);
+            position: relative;
+        }
+
+        .centerbox {
+            .part2_slidebox {
+                .btn_box {
+                    left: 60%;
+                    top: 85%;
+
+                    > span {
+                        width: clamp(50px, 10vw, 68px);
+                        height: clamp(50px, 10vw, 68px);
+
+                        img {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+
+            .textbox {
+                text-align: start;
+
+                h2 {
+                    font-size: clamp(2.8rem, 5vw, 4rem);
+                }
+
+                p {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    text-align: start;
+                }
+            }
+
+            .btn_box {
+                margin-top: 30px;
+
+                .btn {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    padding: 12px 18px;
+                }
+            }
+
+             .part2_slidebox {
+                width: 40%;
+                .swiper-slide img {width: 100%;}
+                .btn_box {
+                    left: 80%;
+                    top: 74%;
+                    gap: 1.4rem;
+                    span {width: 40px; height: 40px;}
+                } 
+        }
+        }
+
+    }
+
+    .section4 {
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 3rem;
+        }
+
+        .content {
+            align-items: center;
+
+            li {
+                width: 100%;
+                max-width: 300px;
+
+                img {width: clamp(200px, 20.8vw, 360px );
+            }
+        }
+    }
+
+    footer {
+        padding: 30px 20px;
+        font-size: clamp(1.2rem, 2vw, 1.4rem);
+
+        h1 img {
+            max-width: 150px;
+        }
+
+        .info_box {
+            margin-left: 0;
+            margin-top: 2rem;
+            gap: 6px;
+
+            ul {
+                gap: 1rem;
+                text-align: center;
+
+                li {text-indent: 2rem;}
+                a {
+                    font-size: clamp(1.2rem, 2vw, 1.4rem);
+                }
+
+                &:last-child {
+                    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+                }
+            }
+        }
+    }
+}}
+
+// 소형 모바일 (~ 480px)
+@media (max-width: 480px) {
+    .visual {
+        .centerbox .textbox {
+            strong {
+                font-size: clamp(2.4rem, 7vw, 4rem);
+            }
+
+            .detail p {
+                font-size: clamp(1.4rem, 3vw, 1.6rem);
+            }
+        }
+    }
+
+    .section1 {
+        .centerbox {
+            .textbox {
+                h2 {
+                    font-size: clamp(2rem, 6vw, 3rem);
+                }
+            }
+
+    
+        }
+    }
+
+    .section3 {
+        .centerbox {
+            .part2_slidebox {
+                .btn_box {
+                    left: 50%;
+                    top: 90%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    .section4 {
+        .content {}
+    }
+}}
