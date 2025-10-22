@@ -422,7 +422,7 @@ footer .info_box ul:last-child {
 }
 @media (max-width: 1024px) {
   .centerbox {
-    padding: 0 30px;
+    padding: 0 10px;
   }
   header .pc_nav .gnb li a {
     font-size: clamp(1.6rem, 2vw, 2rem);
@@ -492,7 +492,7 @@ footer .info_box ul:last-child {
     top: 0;
   }
   .section2 .content_box .content li img {
-    max-width: clamp(280px, 40vw, 360px);
+    max-width: clamp(200px, 14.58vw, 280px);
   }
   .section3 {
     height: auto;
@@ -609,7 +609,7 @@ footer .info_box ul:last-child {
     padding: 8rem 0;
   }
   .section_box > section {
-    padding: 8rem 0;
+    padding: 3rem 0;
   }
   .section1 .centerbox .textbox {
     padding: 2rem;
@@ -651,7 +651,7 @@ footer .info_box ul:last-child {
     padding: 12px 18px;
   }
   .section2 .content_box .content li img {
-    max-width: clamp(200px, 60vw, 320px);
+    max-width: clamp(130px, 10.41vw, 200px);
   }
   .section3 {
     margin: 5rem 0;
@@ -674,6 +674,7 @@ footer .info_box ul:last-child {
   }
   .section3 .centerbox .textbox {
     text-align: start;
+    gap: 0;
   }
   .section3 .centerbox .textbox h2 {
     font-size: clamp(2.8rem, 5vw, 4rem);
@@ -683,7 +684,7 @@ footer .info_box ul:last-child {
     text-align: start;
   }
   .section3 .centerbox .btn_box {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .section3 .centerbox .btn_box .btn {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
@@ -716,7 +717,7 @@ footer .info_box ul:last-child {
     max-width: 300px;
   }
   .section4 .content li img {
-    width: clamp(200px, 20.8vw, 360px);
+    max-width: clamp(130px, 10.41vw, 200px);
   }
   .section4 footer {
     padding: 30px 20px;
