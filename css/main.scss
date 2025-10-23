@@ -1,5 +1,5 @@
 body {
-    background: #EFF1F8;
+    background: #FBFAF9;
     overflow-x: hidden;
 }
 
@@ -218,11 +218,11 @@ header {
             background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            box-shadow: 0 8px 16px 0 rgba(1, 2, 61, 0.37);
 
             h2 {
                 font-size: 5rem;
-                color: #666;
+                color: #656565;
                 font-weight: normal;
             }
 
@@ -472,7 +472,7 @@ footer {
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 24px 0 rgba(1, 2, 61, 0.37);
     font-size: 1.4rem;
 
     .info_box {
@@ -508,19 +508,28 @@ footer {
         .centerbox .content {
             display: flex;
             gap: 1.5rem;
+
             li {
-                display: flex;align-items: center;
+                display: flex;
+                align-items: center;
+
                 img {
                     width: clamp(200px, 18.75vw, 360px);
                 }
             }
-            li:first-child {top: 0;}
+
+            li:first-child {
+                top: 0;
+            }
 
             .textbox {
                 font-size: clamp(1.6rem, 1.04vw, 2rem);
-                h3 {font-size: clamp(3rem, 2.6vw, 5rem);}
+
+                h3 {
+                    font-size: clamp(3rem, 2.6vw, 5rem);
+                }
             }
-            
+
         }
     }
 }
@@ -592,12 +601,15 @@ footer {
             .textbox {
                 width: 100%;
 
-                .text_b {text-align: center; margin-bottom: 1rem;}
+                .text_b {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
 
                 h3 {
                     font-size: clamp(3rem, 4.5vw, 5rem);
                     text-align: center;
-                
+
                 }
 
                 p {
@@ -605,8 +617,13 @@ footer {
                     font-size: clamp(1.6rem, 2vw, 2rem);
                     text-align: center;
                 }
-                .btn_box {margin-top: 1rem;
-                    .btn {margin-top: 1rem;}
+
+                .btn_box {
+                    margin-top: 1rem;
+
+                    .btn {
+                        margin-top: 1rem;
+                    }
                 }
             }
 
@@ -658,14 +675,19 @@ footer {
                     text-align: start;
                 }
 
-                .btn_box {text-align: start;}
+                .btn_box {
+                    text-align: start;
+                }
             }
-            
-        
+
+
             .part2_slidebox {
                 width: 60%;
-                .swiper-slide img {width: 100%;}
-        }
+
+                .swiper-slide img {
+                    width: 100%;
+                }
+            }
 
 
         }
@@ -680,8 +702,9 @@ footer {
             justify-content: center;
 
             li {
-                img {width: clamp(200px, 20.8vw, 360px );
-            }
+                img {
+                    width: clamp(200px, 20.8vw, 360px);
+                }
 
             }
         }
@@ -699,311 +722,325 @@ footer {
     }
 
 
-// 모바일 (~ 768px)
-@media (max-width: 768px) {
-    .centerbox {
-        padding: 0 20px;
-    }
-
-    header {
+    // 모바일 (~ 768px)
+    @media (max-width: 768px) {
         .centerbox {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
+            padding: 0 20px;
         }
 
-        .pc_nav .gnb {
-            flex-wrap: wrap;
-            justify-content: center;
+        header {
+            .centerbox {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
 
-            li a {
-                font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                padding: 1em 1.5em;
+            .pc_nav .gnb {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                li a {
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    padding: 1em 1.5em;
+                }
+            }
+
+            .topmenu {
+                width: 100%;
+                justify-content: center;
+
+                a {
+                    font-size: clamp(1.4rem, 2vw, 1.6rem);
+                }
             }
         }
 
-        .topmenu {
-            width: 100%;
-            justify-content: center;
+        .search_box {
+            width: clamp(300px, 90vw, 700px);
+            height: 60px;
 
-            a {
-                font-size: clamp(1.4rem, 2vw, 1.6rem);
-            }
-        }
-    }
-
-    .search_box {
-        width: clamp(300px, 90vw, 700px);
-        height: 60px;
-
-        input {
-            font-size: clamp(1.4rem, 2vw, 1.8rem);
-        }
-
-        button {
-            width: 60px;
-        }
-    }
-
-    .btn_close {
-        right: -30px;
-        top: -40px;
-        width: 35px;
-        height: 35px;
-    }
-
-    .visual {
-        .centerbox .textbox {
-            transform: translate(-50%, -50%);
-            left: 50%;
-            width: 90%;
-            gap: 1.5em;
-
-            strong {
-                font-size: clamp(3rem, 6vw, 6rem);
+            input {
+                font-size: clamp(1.4rem, 2vw, 1.8rem);
             }
 
-            .detail {
+            button {
+                width: 60px;
+            }
+        }
+
+        .btn_close {
+            right: -30px;
+            top: -40px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .visual {
+            .centerbox .textbox {
+                transform: translate(-50%, -50%);
+                left: 50%;
+                width: 90%;
                 gap: 1.5em;
 
-                p {
-                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                    padding-left: 0;
-                }
-            }
-        }
-    }
-
-    .section_box {
-        padding: 8rem 0;
-
-        > section {
-            padding: 3rem 0;
-        }
-    }
-
-    .section1 {
-        .centerbox {
-            .textbox {
-                padding: 2rem;
-
-                h2 {
-                    font-size: clamp(2.4rem, 5vw, 4rem);
+                strong {
+                    font-size: clamp(3rem, 6vw, 6rem);
                 }
 
-                .btn_box {
-                    justify-content: center;
+                .detail {
+                    gap: 1.5em;
 
-                    > span img {
-                        width: clamp(40px, 8vw, 60px);
+                    p {
+                        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        padding-left: 0;
                     }
                 }
             }
+        }
 
-            .part1_slidebox {
-                .swiper-slide {
-                    .text {
-                        .title {
-                            font-size: clamp(1.6rem, 3vw, 2.2rem);
+        .section_box {
+            padding: 8rem 0;
 
-                            .category {
-                                font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+            >section {
+                padding: 3rem 0;
+            }
+        }
+
+        .section1 {
+            .centerbox {
+                .textbox {
+                    padding: 2rem;
+
+                    h2 {
+                        font-size: clamp(2.4rem, 5vw, 4rem);
+                    }
+
+                    .btn_box {
+                        justify-content: center;
+
+                        >span img {
+                            width: clamp(40px, 8vw, 60px);
+                        }
+                    }
+                }
+
+                .part1_slidebox {
+                    .swiper-slide {
+                        .text {
+                            .title {
+                                font-size: clamp(1.6rem, 3vw, 2.2rem);
+
+                                .category {
+                                    font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+                                }
+                            }
+
+                            .detail {
+                                font-size: clamp(1.4rem, 2.5vw, 1.8rem);
                             }
                         }
 
-                        .detail {
-                            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                        }
                     }
-
                 }
             }
         }
-    }
 
-    .section2 {
-        .content_box {
-            .textbox {
-                text-align: center;
-
-                h3 {
-                    font-size: clamp(2.8rem, 6vw, 4rem);
-                }
-
-                .text_b {
+        .section2 {
+            .content_box {
+                .textbox {
                     text-align: center;
-                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: clamp(2.8rem, 6vw, 4rem);
+                    }
+
+                    .text_b {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        text-align: center;
+                    }
+
+                    .btn_box .btn {
+                        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        padding: 12px 18px;
+                    }
                 }
 
-                p {
-                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                    text-align: center;
+                .content {
+                    li img {
+                        max-width: clamp(130px, 10.41vw, 200px);
+                    }
+                }
+            }
+        }
+
+        .section3 {
+            margin: 5rem 0;
+
+            .big_img {
+                width: 100%;
+                height: clamp(400px, 60vh, 600px);
+                position: relative;
+            }
+
+            .centerbox {
+                .part2_slidebox {
+                    .btn_box {
+                        left: 60%;
+                        top: 85%;
+
+                        >span {
+                            width: clamp(50px, 10vw, 68px);
+                            height: clamp(50px, 10vw, 68px);
+
+                            img {
+                                width: 60%;
+                            }
+                        }
+                    }
                 }
 
-                .btn_box .btn {
-                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                    padding: 12px 18px;
+                .textbox {
+                    text-align: start;
+                    gap: 0;
+
+                    h2 {
+                        font-size: clamp(2.8rem, 5vw, 4rem);
+                    }
+
+                    p {
+                        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        text-align: start;
+                    }
                 }
+
+                .btn_box {
+                    margin-top: 20px;
+
+                    .btn {
+                        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                        padding: 12px 18px;
+                    }
+                }
+
+                .part2_slidebox {
+                    width: 40%;
+
+                    .swiper-slide img {
+                        width: 100%;
+                    }
+
+                    .btn_box {
+                        left: 80%;
+                        top: 74%;
+                        gap: 1.4rem;
+
+                        span {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .section4 {
+            h2 {
+                font-size: clamp(2rem, 4vw, 2.8rem);
+                margin-bottom: 3rem;
             }
 
             .content {
-                li img {
-                    max-width: clamp(130px, 10.41vw, 200px);
-                }
-            }
-        }
-    }
+                align-items: center;
 
-    .section3 {
-        margin: 5rem 0;
+                li {
+                    width: 100%;
+                    max-width: 300px;
 
-        .big_img {
-            width: 100%;
-            height: clamp(400px, 60vh, 600px);
-            position: relative;
-        }
-
-        .centerbox {
-            .part2_slidebox {
-                .btn_box {
-                    left: 60%;
-                    top: 85%;
-
-                    > span {
-                        width: clamp(50px, 10vw, 68px);
-                        height: clamp(50px, 10vw, 68px);
-
-                        img {
-                            width: 60%;
-                        }
+                    img {
+                        max-width: clamp(130px, 10.41vw, 200px);
                     }
                 }
             }
 
-            .textbox {
-                text-align: start;
-                gap: 0;
+            footer {
+                padding: 30px 20px;
+                font-size: clamp(1.2rem, 2vw, 1.4rem);
 
-                h2 {
-                    font-size: clamp(2.8rem, 5vw, 4rem);
+                h1 img {
+                    max-width: 150px;
                 }
 
-                p {
-                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                    text-align: start;
-                }
-            }
+                .info_box {
+                    margin-left: 0;
+                    margin-top: 2rem;
+                    gap: 6px;
 
-            .btn_box {
-                margin-top: 20px;
+                    ul {
+                        gap: 1rem;
+                        text-align: center;
 
-                .btn {
-                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-                    padding: 12px 18px;
-                }
-            }
+                        li {
+                            text-indent: 2rem;
+                        }
 
-             .part2_slidebox {
-                width: 40%;
-                .swiper-slide img {width: 100%;}
-                .btn_box {
-                    left: 80%;
-                    top: 74%;
-                    gap: 1.4rem;
-                    span {width: 40px; height: 40px;}
-                } 
-        }
-        }
+                        a {
+                            font-size: clamp(1.2rem, 2vw, 1.4rem);
+                        }
 
-    }
-
-    .section4 {
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            margin-bottom: 3rem;
-        }
-
-        .content {
-            align-items: center;
-
-            li {
-                width: 100%;
-                max-width: 300px;
-
-                img { max-width: clamp(130px, 10.41vw, 200px);
-            }
-        }
-    }
-
-    footer {
-        padding: 30px 20px;
-        font-size: clamp(1.2rem, 2vw, 1.4rem);
-
-        h1 img {
-            max-width: 150px;
-        }
-
-        .info_box {
-            margin-left: 0;
-            margin-top: 2rem;
-            gap: 6px;
-
-            ul {
-                gap: 1rem;
-                text-align: center;
-
-                li {text-indent: 2rem;}
-                a {
-                    font-size: clamp(1.2rem, 2vw, 1.4rem);
-                }
-
-                &:last-child {
-                    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-                }
-            }
-        }
-    }
-}}
-
-// 소형 모바일 (~ 480px)
-@media (max-width: 480px) {
-    .visual {
-        .centerbox .textbox {
-            strong {
-                font-size: clamp(2.4rem, 7vw, 4rem);
-            }
-
-            .detail p {
-                font-size: clamp(1.4rem, 3vw, 1.6rem);
-            }
-        }
-    }
-
-    .section1 {
-        .centerbox {
-            .textbox {
-                h2 {
-                    font-size: clamp(2rem, 6vw, 3rem);
-                }
-            }
-
-    
-        }
-    }
-
-    .section3 {
-        .centerbox {
-            .part2_slidebox {
-                .btn_box {
-                    left: 50%;
-                    top: 90%;
-                    transform: translateX(-50%);
+                        &:last-child {
+                            font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+                        }
+                    }
                 }
             }
         }
     }
 
-    .section4 {
-        .content {}
+    // 소형 모바일 (~ 480px)
+    @media (max-width: 480px) {
+        .visual {
+            .centerbox .textbox {
+                strong {
+                    font-size: clamp(2.4rem, 7vw, 4rem);
+                }
+
+                .detail p {
+                    font-size: clamp(1.4rem, 3vw, 1.6rem);
+                }
+            }
+        }
+
+        .section1 {
+            .centerbox {
+                .textbox {
+                    h2 {
+                        font-size: clamp(2rem, 6vw, 3rem);
+                    }
+                }
+
+
+            }
+        }
+
+        .section3 {
+            .centerbox {
+                .part2_slidebox {
+                    .btn_box {
+                        left: 50%;
+                        top: 90%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+
+        .section4 {
+            .content {}
+        }
     }
-}}
+}

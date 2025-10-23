@@ -1,5 +1,5 @@
 body {
-  background: #EFF1F8;
+  background: #FBFAF9;
   overflow-x: hidden;
 }
 
@@ -171,11 +171,11 @@ header .topmenu a:nth-child(1)::after {
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 16px 0 rgba(1, 2, 61, 0.37);
 }
 .section1 .centerbox .textbox h2 {
   font-size: 5rem;
-  color: #666;
+  color: #656565;
   font-weight: normal;
 }
 .section1 .centerbox .textbox .btn_box {
@@ -374,7 +374,7 @@ footer {
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 24px 0 rgba(1, 2, 61, 0.37);
   font-size: 1.4rem;
 }
 footer .info_box {
