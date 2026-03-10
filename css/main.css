@@ -1,10 +1,10 @@
+html {
+  font-size: 10px;
+}
+
 body {
   background: #FBFAF9;
   overflow-x: hidden;
-}
-
-html {
-  font-size: 10px;
 }
 
 .centerbox {
@@ -17,6 +17,7 @@ header .centerbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 header .pc_nav .gnb {
   display: flex;
@@ -124,7 +125,7 @@ header .topmenu a:nth-child(1)::after {
   color: #F9FAFB;
 }
 .visual .centerbox .textbox strong {
-  font-size: 8rem;
+  font-size: clamp(5rem, 5.5vw, 8rem);
   font-weight: normal;
 }
 .visual .centerbox .textbox .detail {
@@ -133,7 +134,7 @@ header .topmenu a:nth-child(1)::after {
   gap: 2em;
 }
 .visual .centerbox .textbox .detail p {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 1.5vw, 2.2rem);
   padding-left: 1.5rem;
 }
 .visual.on::before {
@@ -146,6 +147,9 @@ header .topmenu a:nth-child(1)::after {
   background: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
+.visual .swiper-pagination {
+  display: none;
+}
 
 .section_box {
   padding: 15rem 0;
@@ -156,7 +160,7 @@ header .topmenu a:nth-child(1)::after {
 
 .section1 .centerbox {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   position: relative;
   height: 47vh;
 }
@@ -164,17 +168,17 @@ header .topmenu a:nth-child(1)::after {
   position: relative;
   top: 50px;
   flex-shrink: 0;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 3rem;
   z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 8px 16px 0 rgba(1, 2, 61, 0.37);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
+  padding: 3rem;
 }
 .section1 .centerbox .textbox h2 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 3.5vw, 5rem);
   color: #656565;
   font-weight: normal;
 }
@@ -182,7 +186,7 @@ header .topmenu a:nth-child(1)::after {
   display: flex;
   gap: 20px;
   margin-top: 20px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .section1 .centerbox .textbox .btn_box > span {
   display: flex;
@@ -207,15 +211,15 @@ header .topmenu a:nth-child(1)::after {
   text-align: justify;
 }
 .section1 .centerbox .part1_slidebox .swiper-slide .text .title {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 .section1 .centerbox .part1_slidebox .swiper-slide .text .title .category {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #505050;
   margin-left: 5px;
 }
 .section1 .centerbox .part1_slidebox .swiper-slide .text .detail {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.3;
   margin-top: 5px;
 }
@@ -223,136 +227,189 @@ header .topmenu a:nth-child(1)::after {
 .section2 .content_box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
 }
 .section2 .content_box .textbox {
-  width: 32%;
+  width: 27%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
 }
-.section2 .content_box .textbox h3 {
-  display: block;
-  font-size: 5rem;
-  line-height: 1.1;
-}
-.section2 .content_box .textbox .text_b {
-  margin-bottom: 30px;
-  text-align: right;
-}
 .section2 .content_box .textbox p {
-  width: 95%;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.4vw, 2rem);
   text-align: justify;
-  display: block;
-  padding: 0 3px 0 5px;
+  padding: 0 10px;
+  line-height: 1.7;
 }
 .section2 .content_box .textbox .btn_box {
-  text-align: center;
-  margin-top: 30px;
+  text-align: end;
+  margin-top: 40px;
+  padding: 0 10px;
 }
 .section2 .content_box .textbox .btn_box .btn {
-  margin-top: 20px;
   font-size: 1.8rem;
   background: #1a1a1a;
   color: #fafafa;
   padding: 15px 20px;
   display: inline-block;
 }
+.section2 .content_box .textbox h3 {
+  font-size: clamp(3.5rem, 3.5vw, 5rem);
+  line-height: 1.1;
+  font-weight: normal;
+}
+.section2 .content_box .textbox .text_b {
+  margin-bottom: 30px;
+  text-align: left;
+  margin-left: 10rem;
+}
 .section2 .content_box .content {
-  display: flex;
-  flex-wrap: wrap;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 380px 380px;
+  gap: 2.4rem;
   justify-content: flex-end;
-  gap: 3rem;
 }
-.section2 .content_box .content li:first-child {
-  position: relative;
-  top: 240px;
+.section2 .content_box .content .vision-card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 360px;
+  gap: 2rem;
 }
-.section2 .content_box .content li img {
-  max-width: 360px;
+.section2 .content_box .content .vision-card:first-child {
+  grid-column: 1;
+  grid-row: 1/3;
+  align-self: center;
+  height: 360px;
+}
+.section2 .content_box .content .vision-card:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.section2 .content_box .content .vision-card:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.section2 .content_box .content .vision-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section2 .content_box .content .vision-name {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #222;
+}
+.section2 .content_box .content .vision-desc {
+  font-size: 1.7rem;
+  color: #505050;
+  line-height: 1.6;
+  text-align: justify;
+}
+.section2 .content_box .content .vision-img {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.section2 .content_box .content .vision-img img {
+  width: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1rem;
 }
 
 .section3 {
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 717px;
   margin: 10rem 0;
 }
-.section3 .big_img {
+.section3 .big_glass {
+  width: 50%;
+  aspect-ratio: 4/3;
+  border-radius: 0 4rem 4rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
+}
+.section3 .centerbox {
   position: absolute;
   top: 0;
   left: 0;
-  width: 856px;
-  height: 717px;
-  z-index: 0;
-}
-.section3 .big_img img {
-  width: 100%;
+  right: 0;
+  bottom: 0;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.section3 .centerbox {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  position: relative;
+  gap: 3rem;
   z-index: 1;
 }
-.section3 .centerbox .part2_slidebox {
-  max-width: 922px;
-  margin-left: 0;
-  position: relative;
-}
-.section3 .centerbox .part2_slidebox .swiper-slide img {
-  width: 100%;
-}
-.section3 .centerbox .part2_slidebox .btn_box {
+.section3 .part2_slidebox .btn_box {
   position: absolute;
-  left: 80%;
-  top: 75%;
+  left: 76%;
+  top: 84%;
   display: flex;
   gap: 20px;
   z-index: 7;
 }
-.section3 .centerbox .part2_slidebox .btn_box > span {
+.section3 .part2_slidebox .btn_box > span {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
+  padding: 3rem;
   width: 68px;
   height: 68px;
-  background: #fafafa;
-  border: 1px solid #fafafa;
-  box-shadow: 6px 13px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.section3 .centerbox .textbox {
+.section3 .textbox {
   width: 22%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
 }
-.section3 .centerbox .textbox h2 {
-  font-size: 4.8rem;
-  margin-bottom: 10px;
-}
-.section3 .centerbox .textbox p {
-  font-size: 2rem;
+.section3 .textbox p {
+  font-size: clamp(1.6rem, 1.4vw, 2rem);
   text-align: justify;
+  padding: 0 10px;
+  line-height: 1.7;
 }
-.section3 .centerbox .btn_box {
-  text-align: center;
+.section3 .textbox .btn_box {
+  text-align: end;
   margin-top: 40px;
+  padding: 0 10px;
 }
-.section3 .centerbox .btn_box .btn {
+.section3 .textbox .btn_box .btn {
   font-size: 1.8rem;
   background: #1a1a1a;
   color: #fafafa;
   padding: 15px 20px;
   display: inline-block;
+}
+.section3 .textbox h2 {
+  font-size: clamp(3rem, 3.3vw, 4.8rem);
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .section4 h2 {
@@ -361,24 +418,71 @@ header .topmenu a:nth-child(1)::after {
   text-align: center;
   margin-bottom: 5rem;
 }
-.section4 .content {
+.section4 .clients-list {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1rem;
+}
+.section4 .client-card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 380px;
+  gap: 2.5rem;
+}
+.section4 .client-card img {
+  margin-top: auto;
+}
+.section4 .client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section4 .client-name {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #222;
+}
+.section4 .client-desc {
+  font-size: 1.7rem;
+  color: #505050;
+  line-height: 1.6;
+  text-align: justify;
+}
+.section4 .client-img {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.section4 .client-img img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1rem;
 }
 
 footer {
-  height: 300px;
   padding: 50px;
   border-radius: 1rem 1rem 0 0;
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px 0 rgba(1, 2, 61, 0.37);
+  box-shadow: 0 2px 4px 0 rgba(1, 2, 61, 0.37);
   font-size: 1.4rem;
 }
+footer .centerbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
 footer .info_box {
-  margin-left: 3rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -395,34 +499,29 @@ footer .info_box ul:last-child {
   font-size: 1.3rem;
 }
 
-@media (max-width: 1324px) {
-  .visual .centerbox .textbox strong {
-    font-size: clamp(4rem, 4.6vw, 7.8rem);
+@media (max-width: 1280px) {
+  .section2 .content_box .textbox {
+    width: 28%;
   }
-  .section2 .centerbox .content {
-    display: flex;
-    gap: 1.5rem;
+  .section2 .content_box .content {
+    width: 66%;
   }
-  .section2 .centerbox .content li {
-    display: flex;
-    align-items: center;
+  .section3 .big_glass {
+    width: 60%;
   }
-  .section2 .centerbox .content li img {
-    width: clamp(200px, 18.75vw, 360px);
+  .section3 .part2_slidebox {
+    width: 57%;
   }
-  .section2 .centerbox .content li:first-child {
-    top: 0;
+  .section3 .part2_slidebox .btn_box {
+    left: 46%;
   }
-  .section2 .centerbox .content .textbox {
-    font-size: clamp(1.6rem, 1.04vw, 2rem);
-  }
-  .section2 .centerbox .content .textbox h3 {
-    font-size: clamp(3rem, 2.6vw, 5rem);
+  .section3 .textbox {
+    width: 26%;
   }
 }
 @media (max-width: 1024px) {
   .centerbox {
-    padding: 0 10px;
+    padding: 0 30px;
   }
   header .pc_nav .gnb li a {
     font-size: clamp(1.6rem, 2vw, 2rem);
@@ -451,9 +550,6 @@ footer .info_box ul:last-child {
   .section1 .centerbox .textbox {
     position: relative;
   }
-  .section1 .centerbox .textbox h2 {
-    font-size: clamp(3rem, 4vw, 5rem);
-  }
   .section1 .centerbox .part1_slidebox {
     width: 100%;
     position: relative;
@@ -466,90 +562,78 @@ footer .info_box ul:last-child {
   .section2 .content_box .textbox {
     width: 100%;
   }
-  .section2 .content_box .textbox .text_b {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
   .section2 .content_box .textbox h3 {
     font-size: clamp(3rem, 4.5vw, 5rem);
     text-align: center;
   }
+  .section2 .content_box .textbox .text_b {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
   .section2 .content_box .textbox p {
-    width: 100%;
-    font-size: clamp(1.6rem, 2vw, 2rem);
     text-align: center;
   }
   .section2 .content_box .textbox .btn_box {
-    margin-top: 1rem;
-  }
-  .section2 .content_box .textbox .btn_box .btn {
+    text-align: center;
     margin-top: 1rem;
   }
   .section2 .content_box .content {
-    justify-content: center;
+    width: 100%;
   }
-  .section2 .content_box .content li:first-child {
-    top: 0;
+  .section2 .content_box .content .vision-card:first-child {
+    grid-row: 1/3;
   }
-  .section2 .content_box .content li img {
-    max-width: clamp(200px, 14.58vw, 280px);
-  }
-  .section3 {
-    height: auto;
-    padding: 5rem 0;
-  }
-  .section3 .big_img {
-    width: clamp(600px, 44.58vw, 856px);
-    height: auto;
+  .section3 .big_glass {
+    display: none;
   }
   .section3 .centerbox {
+    position: static;
     flex-direction: column;
+    height: auto;
+    padding: 5rem 30px;
     gap: 4rem;
   }
-  .section3 .centerbox .part2_slidebox {
-    max-width: 100%;
+  .section3 .part2_slidebox {
+    width: 80%;
   }
-  .section3 .centerbox .part2_slidebox .btn_box {
-    left: 70%;
+  .section3 .part2_slidebox .btn_box {
+    position: static;
+    justify-content: center;
   }
-  .section3 .centerbox .textbox {
+  .section3 .textbox {
     width: 100%;
     text-align: start;
   }
-  .section3 .centerbox .textbox h2 {
+  .section3 .textbox h2 {
     font-size: clamp(3rem, 4vw, 4.8rem);
   }
-  .section3 .centerbox .textbox p {
-    font-size: clamp(1.6rem, 2vw, 2rem);
+  .section3 .textbox p {
     text-align: start;
   }
-  .section3 .centerbox .textbox .btn_box {
+  .section3 .textbox .btn_box {
     text-align: start;
-  }
-  .section3 .centerbox .part2_slidebox {
-    width: 60%;
-  }
-  .section3 .centerbox .part2_slidebox .swiper-slide img {
-    width: 100%;
   }
   .section4 h2 {
     font-size: clamp(2.4rem, 3vw, 3rem);
   }
-  .section4 .content {
-    justify-content: center;
+  .section4 .clients-list {
+    gap: 1.5rem;
   }
-  .section4 .content li img {
-    width: clamp(200px, 20.8vw, 360px);
+  .section4 .client-name {
+    font-size: 1.8rem;
+  }
+  .section4 .client-desc {
+    font-size: 1.5rem;
   }
   footer {
-    height: auto;
     padding: 40px 30px;
   }
   footer .info_box ul {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 1024px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .centerbox {
     padding: 0 20px;
   }
@@ -609,10 +693,10 @@ footer .info_box ul:last-child {
     padding: 8rem 0;
   }
   .section_box > section {
-    padding: 3rem 0;
+    padding: 6rem 0;
   }
-  .section1 .centerbox .textbox {
-    padding: 2rem;
+  .section1 .centerbox {
+    flex-direction: column;
   }
   .section1 .centerbox .textbox h2 {
     font-size: clamp(2.4rem, 5vw, 4rem);
@@ -620,132 +704,93 @@ footer .info_box ul:last-child {
   .section1 .centerbox .textbox .btn_box {
     justify-content: center;
   }
-  .section1 .centerbox .textbox .btn_box > span img {
-    width: clamp(40px, 8vw, 60px);
+  .section1 .centerbox .part1_slidebox {
+    left: 0;
   }
   .section1 .centerbox .part1_slidebox .swiper-slide .text .title {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
   }
-  .section1 .centerbox .part1_slidebox .swiper-slide .text .title .category {
+  .section1 .centerbox .part1_slidebox .swiper-slide .text .category {
     font-size: clamp(1.4rem, 2.5vw, 1.6rem);
   }
   .section1 .centerbox .part1_slidebox .swiper-slide .text .detail {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   }
-  .section2 .content_box .textbox {
-    text-align: center;
-  }
   .section2 .content_box .textbox h3 {
     font-size: clamp(2.8rem, 6vw, 4rem);
   }
-  .section2 .content_box .textbox .text_b {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   .section2 .content_box .textbox p {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    text-align: center;
   }
   .section2 .content_box .textbox .btn_box .btn {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     padding: 12px 18px;
   }
-  .section2 .content_box .content li img {
-    max-width: clamp(130px, 10.41vw, 200px);
+  .section2 .content_box .content {
+    grid-template-columns: 1fr;
   }
-  .section3 {
-    margin: 5rem 0;
+  .section2 .content_box .content .vision-card:first-child {
+    grid-column: 1;
+    grid-row: auto;
+    align-self: auto;
   }
-  .section3 .big_img {
+  .section2 .content_box .content .vision-card:nth-child(2) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .section2 .content_box .content .vision-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .section3 .part2_slidebox {
     width: 100%;
-    height: clamp(400px, 60vh, 600px);
-    position: relative;
   }
-  .section3 .centerbox .part2_slidebox .btn_box {
-    left: 60%;
-    top: 85%;
-  }
-  .section3 .centerbox .part2_slidebox .btn_box > span {
+  .section3 .btn_box > span {
     width: clamp(50px, 10vw, 68px);
     height: clamp(50px, 10vw, 68px);
   }
-  .section3 .centerbox .part2_slidebox .btn_box > span img {
+  .section3 .btn_box > span img {
     width: 60%;
   }
-  .section3 .centerbox .textbox {
-    text-align: start;
-    gap: 0;
-  }
-  .section3 .centerbox .textbox h2 {
+  .section3 .textbox h2 {
     font-size: clamp(2.8rem, 5vw, 4rem);
-  }
-  .section3 .centerbox .textbox p {
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    text-align: start;
-  }
-  .section3 .centerbox .btn_box {
-    margin-top: 20px;
-  }
-  .section3 .centerbox .btn_box .btn {
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    padding: 12px 18px;
-  }
-  .section3 .centerbox .part2_slidebox {
-    width: 40%;
-  }
-  .section3 .centerbox .part2_slidebox .swiper-slide img {
-    width: 100%;
-  }
-  .section3 .centerbox .part2_slidebox .btn_box {
-    left: 80%;
-    top: 74%;
-    gap: 1.4rem;
-  }
-  .section3 .centerbox .part2_slidebox .btn_box span {
-    width: 40px;
-    height: 40px;
   }
   .section4 h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
     margin-bottom: 3rem;
   }
-  .section4 .content {
-    align-items: center;
+  .section4 .clients-list {
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
   }
-  .section4 .content li {
-    width: 100%;
-    max-width: 300px;
+  .section4 .client-img img {
+    width: 40%;
   }
-  .section4 .content li img {
-    max-width: clamp(130px, 10.41vw, 200px);
-  }
-  .section4 footer {
+  footer {
     padding: 30px 20px;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
   }
-  .section4 footer h1 img {
+  footer .centerbox {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  footer h1 img {
     max-width: 150px;
   }
-  .section4 footer .info_box {
-    margin-left: 0;
-    margin-top: 2rem;
+  footer .info_box {
     gap: 6px;
   }
-  .section4 footer .info_box ul {
+  footer .info_box ul {
     gap: 1rem;
-    text-align: center;
   }
-  .section4 footer .info_box ul li {
-    text-indent: 2rem;
-  }
-  .section4 footer .info_box ul a {
+  footer .info_box ul a {
     font-size: clamp(1.2rem, 2vw, 1.4rem);
   }
-  .section4 footer .info_box ul:last-child {
+  footer .info_box ul:last-child {
     font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   }
 }
-@media (max-width: 1024px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .visual .centerbox .textbox strong {
     font-size: clamp(2.4rem, 7vw, 4rem);
   }
@@ -755,9 +800,11 @@ footer .info_box ul:last-child {
   .section1 .centerbox .textbox h2 {
     font-size: clamp(2rem, 6vw, 3rem);
   }
-  .section3 .centerbox .part2_slidebox .btn_box {
-    left: 50%;
-    top: 90%;
-    transform: translateX(-50%);
+  .section3 .part2_slidebox .btn_box {
+    gap: 1.2rem;
+  }
+  .section3 .part2_slidebox .btn_box > span {
+    width: 44px;
+    height: 44px;
   }
 }/*# sourceMappingURL=main.css.map */
