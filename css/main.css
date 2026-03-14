@@ -244,7 +244,6 @@ header .topmenu a:nth-child(1)::after {
   line-height: 1.7;
 }
 .section2 .content_box .textbox .btn_box {
-  text-align: end;
   margin-top: 40px;
   padding: 0 10px;
 }
@@ -263,7 +262,6 @@ header .topmenu a:nth-child(1)::after {
 .section2 .content_box .textbox .text_b {
   margin-bottom: 30px;
   text-align: left;
-  margin-left: 10rem;
 }
 .section2 .content_box .content {
   width: 60%;
@@ -395,7 +393,6 @@ header .topmenu a:nth-child(1)::after {
   line-height: 1.7;
 }
 .section3 .textbox .btn_box {
-  text-align: end;
   margin-top: 40px;
   padding: 0 10px;
 }
