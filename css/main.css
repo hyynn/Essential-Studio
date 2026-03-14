@@ -237,6 +237,10 @@ header .topmenu a:nth-child(1)::after {
   gap: 10px;
   justify-content: center;
 }
+.section2 .content_box .textbox .text_b {
+  margin-bottom: 30px;
+  text-align: end;
+}
 .section2 .content_box .textbox p {
   font-size: clamp(1.6rem, 1.4vw, 2rem);
   text-align: justify;
@@ -244,6 +248,7 @@ header .topmenu a:nth-child(1)::after {
   line-height: 1.7;
 }
 .section2 .content_box .textbox .btn_box {
+  text-align: center;
   margin-top: 40px;
   padding: 0 10px;
 }
@@ -258,10 +263,6 @@ header .topmenu a:nth-child(1)::after {
   font-size: clamp(3.5rem, 3.5vw, 5rem);
   line-height: 1.1;
   font-weight: normal;
-}
-.section2 .content_box .textbox .text_b {
-  margin-bottom: 30px;
-  text-align: left;
 }
 .section2 .content_box .content {
   width: 60%;
@@ -386,6 +387,10 @@ header .topmenu a:nth-child(1)::after {
   gap: 10px;
   justify-content: center;
 }
+.section3 .textbox .text_b {
+  margin-bottom: 30px;
+  text-align: end;
+}
 .section3 .textbox p {
   font-size: clamp(1.6rem, 1.4vw, 2rem);
   text-align: justify;
@@ -393,6 +398,7 @@ header .topmenu a:nth-child(1)::after {
   line-height: 1.7;
 }
 .section3 .textbox .btn_box {
+  text-align: center;
   margin-top: 40px;
   padding: 0 10px;
 }
@@ -403,9 +409,9 @@ header .topmenu a:nth-child(1)::after {
   padding: 15px 20px;
   display: inline-block;
 }
-.section3 .textbox h2 {
+.section3 .textbox h3 {
   font-size: clamp(3rem, 3.3vw, 4.8rem);
-  margin-bottom: 10px;
+  line-height: 1.1;
   font-weight: normal;
 }
 
@@ -466,7 +472,7 @@ header .topmenu a:nth-child(1)::after {
 }
 
 footer {
-  padding: 50px;
+  padding: 60px;
   border-radius: 1rem 1rem 0 0;
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
@@ -600,10 +606,14 @@ footer .info_box ul:last-child {
   }
   .section3 .textbox {
     width: 100%;
-    text-align: start;
   }
-  .section3 .textbox h2 {
+  .section3 .textbox h3 {
     font-size: clamp(3rem, 4vw, 4.8rem);
+  }
+  .section3 .textbox .text_b {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
   .section3 .textbox p {
     text-align: start;
@@ -749,7 +759,7 @@ footer .info_box ul:last-child {
   .section3 .btn_box > span img {
     width: 60%;
   }
-  .section3 .textbox h2 {
+  .section3 .textbox h3 {
     font-size: clamp(2.8rem, 5vw, 4rem);
   }
   .section4 h2 {
