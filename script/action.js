@@ -14,9 +14,10 @@ $('.btn_close').click(function () {
 gsap.registerPlugin(SplitText);
 
 window.addEventListener('load', function () {
-    const split = SplitText.create(".movetext", { type: "chars" });
+    const split1 = SplitText.create(".swiper-slide:first-child .movetext", { type: "chars" });
+    const split2 = SplitText.create(".swiper-slide:nth-child(2) strong", { type: "chars" });
 
-    gsap.from(split.chars, {
+    gsap.from(split1.chars, {
         y: -200,
         opacity: 0,
         stagger: 0.04,
