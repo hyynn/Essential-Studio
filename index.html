@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSS</title>
+    <title>Essential Studio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
+
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
     <header>
         <div class="centerbox">
-            <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
-            
-            <nav class="pc_nav">
+            <h1 class="logo"><a href="#"><img src="images/logo.svg" alt="Essential Studio 로고"></a></h1>
+            <nav class="pc-nav">
                 <ul class="gnb">
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">WORK</a></li>
@@ -24,330 +26,315 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
-            <div class="topmenu">
-                <a href="#" class="search">Search</a>
-                <a href="#">News</a>
+            <div class="header-right">
+                <div class="topmenu">
+                    <button class="search" aria-label="검색">Search</button>
+                    <a href="#">News</a>
+                </div>
+                <button class="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </div>
+        <!-- Search Box -->
+        <div class="search-box">
+            <form>
+                <input type="text" placeholder="검색어를 입력하세요" maxlength="20">
+                <button type="button" aria-label="검색 실행"><img src="images/icon-search.png" alt=""></button>
+            </form>
+            <button class="btn-close" aria-label="검색창 닫기"></button>
         </div>
     </header>
 
-    <div class="search_box">
-        <form action="">
-            <input type="text" placeholder="검색어를 입력하세요" maxlength="20">
-            <button><img src="images/icon_search.png" alt=""></button>
-        </form>
-        <a href="#" class="btn_close"><img src="images/icon_close.png" alt=""></a>
-    </div>
+    <main>
 
-    <div class="visual swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/visual.jpg" alt="">
-                <div class="centerbox">
-                    <div class="textbox">
-                        <strong>We Create Stories<br>THAT MATTER.</strong>
-                        <div class="detail">
-                            <p>우리는 브랜드의 본질을 파악하고,<br>그 이야기를 시각적으로 완벽하게 전달합니다.</p>
-                            <p>전략적 사고와 창의적 실행을 통해<br>당신의 비즈니스를 완성시키는 디자인을 만듭니다.</p>
+        <!-- Visual -->
+        <div class="visual swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/visual.jpg" alt="Essential Studio 메인 비주얼">
+                    <div class="centerbox">
+                        <div class="textbox">
+                            <h2 class="movetext">We Create Stories<br>THAT MATTER.</h2>
+                            <div class="detail">
+                                <p>우리는 브랜드의 본질을 파악하고,<br>그 이야기를 시각적으로 완벽하게 전달합니다.</p>
+                                <p>전략적 사고와 창의적 실행을 통해<br>당신의 비즈니스를 완성시키는 디자인을 만듭니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/visual-2.jpg" alt="Essential Studio 서브 비주얼">
+                    <div class="centerbox">
+                        <div class="textbox">
+                            <h2>We Create Stories<br>THAT MATTER.</h2>
+                            <div class="detail">
+                                <p>우리는 브랜드의 본질을 파악하고,<br>그 이야기를 시각적으로 완벽하게 전달합니다.</p>
+                                <p>전략적 사고와 창의적 실행을 통해<br>당신의 비즈니스를 완성시키는 디자인을 만듭니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="swiper-slide">
-                <img src="images/visual_2.jpg" alt="">
-                <div class="centerbox">
-                    <div class="textbox">
-                        <strong>We Create Stories<br>THAT MATTER.</strong>
-                        <div class="detail">
-                            <p>우리는 브랜드의 본질을 파악하고,<br>그 이야기를 시각적으로 완벽하게 전달합니다.</p>
-                            <p>전략적 사고와 창의적 실행을 통해<br>당신의 비즈니스를 완성시키는 디자인을 만듭니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
-    </div>
-    <div class="swiper-pagination"></div>
 
-    <div class="section_box">
-        <section class="section1">
-            <div class="centerbox">
-                <div class="textbox">
-                    <h2>Mobile<br>
-                        UIUX Design<br>
-                        Portfolio
-                    </h2>
-                    <div class="btn_box">
-                        <span class="btn_left"><img src="images/btn_left.png" alt=""></span>
-                        <span class="btn_right"><img src="images/btn_right.png" alt=""></span>
-                    </div>
-                </div>
-                <div class="part1_slidebox swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/section1_1.jpg" alt="">
-                            <div class="text">
-                                <span class="title">MealTime / 배달 음식</span>
-                                <span class="detail">사용자가 근처 식당의 메뉴를 탐색하고, 주문을 간편하게 진행할 수 있도록 구성했습니다. 즐겨찾기, 장바구니, 실시간 배달 위치 추적 기능을 메인 화면에 직관적으로 배치했습니다.</span>
-                            </div>
-                        </div>
+        <!-- Sections -->
+        <div class="section-box">
 
-                        <div class="swiper-slide">
-                            <img src="images/section1_2.jpg" alt="">
-                            <div class="text">
-                                <span class="title">FitBuddy / 피트니스</span>
-                                <span class="detail">운동 루틴, 칼로리 기록, 활동 통계를 한눈에 볼 수 있도록 디자인했습니다. 개인 목표 달성을 돕는 알림과 추천 운동을 카드형 UI로 제공하여 사용성을 높였습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_3.jpg" alt="">
-                            <div class="text">
-                                <span class="title">BookNest / 독서 & 전자책</span>
-                                <span class="detail">사용자가 구입한 전자책을 정리하고, 독서 진도를 시각화했습니다. 책갈피, 하이라이트, 독서 기록 기능을 화면 하단 탭으로 직관적으로 배치했습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_4.jpg" alt="">
-                            <div class="text">
-                                <span class="title">ShopEase / 온라인 쇼핑</span>
-                                <span class="detail">상품 카탈로그, 할인 알림, 장바구니 기능을 간단하고 빠르게 접근 가능하도록 디자인했습니다. 추천 상품을 슬라이드형으로 보여주어 탐색 편의성을 높였습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_5.jpg" alt="">
-                            <div class="text">
-                                <span class="title">CityRide / 교통 & 모빌리티</span>
-                                <span class="detail">지도 기반 실시간 교통 정보와 차량 예약 기능을 중심으로 UI를 설계했습니다. 위치 기반 경로 안내, 즐겨찾기 목적지, 결제 기능까지 한 화면에서 처리할 수 있습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_6.jpg" alt="">
-                            <div class="text">
-                                <span class="title">HealthTrack / 건강 관리</span>
-                                <span class="detail">병원 예약, 증상 기록, 건강 통계 등을 시각적으로 표시했습니다. 사용자가 쉽게 예약 내역과 알림을 확인할 수 있는 카드형 레이아웃을 적용했습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_7.jpg" alt="">
-                            <div class="text">
-                                <span class="title">TravelMate / 여행</span>
-                                <span class="detail">일정, 지도, 여행지 정보, 사진 기록 기능을 통합했습니다. 날짜별 일정 카드, 추천 장소 슬라이드, 지도 뷰 등을 활용하여 여행 계획을 직관적으로 보여줍니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_8.jpg" alt="">
-                            <div class="text">
-                                <span class="title">DailyBudget / 금융 관리</span>
-                                <span class="detail">수입/지출 내역과 예산 현황을 그래프와 차트로 시각화했습니다. 빠른 입력, 카테고리별 분류, 월간 보고서 등 사용자가 재정 상태를 쉽게 확인하도록 설계했습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_9.jpg" alt="">
-                            <div class="text">
-                                <span class="title">EventHub / 이벤트</span>
-                                <span class="detail">공연, 전시, 체험 활동 티켓 구매 및 예약을 중심으로 UI를 구성했습니다. 이벤트 카테고리 필터, 추천 이벤트 슬라이드, QR 티켓 저장 기능을 제공했습니다.</span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="images/section1_10.jpg" alt="">
-                            <div class="text">
-                                <span class="title">MindSpace / 라이프스타일</span>
-                                <span class="detail">명상 가이드, 일일 체크인, 목표 달성 기록 기능을 중심으로 화면을 구성했습니다. 집중 시간 타이머와 진도 시각화를 카드형 UI로 배치하여 사용 몰입도를 높였습니다.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section2">
-            <div class="centerbox">
-                <h2 class="title">Vision</h2>
-                <div class="content_box">
+            <!-- Section 1: Mobile UIUX Portfolio -->
+            <section class="section1">
+                <div class="centerbox">
                     <div class="textbox">
-                        <h3>The Way we work</h3>
-                        <p>우리는 단순히 예쁜 것을 만드는게 아닙니다.</p>
-                        <p>전략적인 사고와 창의적인 실행을 통해 클라이언트의 비즈니스 목표를 달성하는 디자인을 만듭니다.</p>
-                        <p>브랜드의 본질을 발견하고, 그것이 세상과 소통할 수 있도록 디자인 합니다.</p>
-                        <div class="btn_box">
-                            <a href="#" class="btn">무료 시안 신청</a>
+                        <h2>Mobile<br class="pc-br"> UIUX Design<br class="pc-br"> Portfolio</h2>
+                        <div class="btn-box">
+                            <button class="btn-left" aria-label="이전 슬라이드">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="btn-right" aria-label="다음 슬라이드">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
+                    <div class="part1-slidebox swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/section1-1.jpg" alt="MealTime 배달 음식 앱">
+                                <div class="text">
+                                    <span class="title">MealTime <span class="category">배달 음식</span></span>
+                                    <span class="detail">사용자가 근처 식당의 메뉴를 탐색하고, 주문을 간편하게 진행할 수 있도록 구성했습니다. 즐겨찾기, 장바구니, 실시간 배달 위치 추적 기능을 메인 화면에 직관적으로 배치했습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-2.jpg" alt="FitBuddy 피트니스 앱">
+                                <div class="text">
+                                    <span class="title">FitBuddy <span class="category">피트니스</span></span>
+                                    <span class="detail">운동 루틴, 칼로리 기록, 활동 통계를 한눈에 볼 수 있도록 디자인했습니다. 개인 목표 달성을 돕는 알림과 추천 운동을 카드형 UI로 제공하여 사용성을 높였습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-3.jpg" alt="BookNest 독서 전자책 앱">
+                                <div class="text">
+                                    <span class="title">BookNest <span class="category">독서 &amp; 전자책</span></span>
+                                    <span class="detail">사용자가 구입한 전자책을 정리하고, 독서 진도를 시각화했습니다. 책갈피, 하이라이트, 독서 기록 기능을 화면 하단 탭으로 직관적으로 배치했습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-4.jpg" alt="ShopEase 온라인 쇼핑 앱">
+                                <div class="text">
+                                    <span class="title">ShopEase <span class="category">온라인 쇼핑</span></span>
+                                    <span class="detail">상품 카탈로그, 할인 알림, 장바구니 기능을 간단하고 빠르게 접근 가능하도록 디자인했습니다. 추천 상품을 슬라이드형으로 보여주어 탐색 편의성을 높였습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-5.jpg" alt="CityRide 교통 모빌리티 앱">
+                                <div class="text">
+                                    <span class="title">CityRide <span class="category">교통 &amp; 모빌리티</span></span>
+                                    <span class="detail">지도 기반 실시간 교통 정보와 차량 예약 기능을 중심으로 UI를 설계했습니다. 위치 기반 경로 안내, 즐겨찾기 목적지, 결제 기능까지 한 화면에서 처리할 수 있습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-6.jpg" alt="HealthTrack 건강 관리 앱">
+                                <div class="text">
+                                    <span class="title">HealthTrack <span class="category">건강 관리</span></span>
+                                    <span class="detail">병원 예약, 증상 기록, 건강 통계 등을 시각적으로 표시했습니다. 사용자가 쉽게 예약 내역과 알림을 확인할 수 있는 카드형 레이아웃을 적용했습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-7.jpg" alt="TravelMate 여행 앱">
+                                <div class="text">
+                                    <span class="title">TravelMate <span class="category">여행</span></span>
+                                    <span class="detail">일정, 지도, 여행지 정보, 사진 기록 기능을 통합했습니다. 날짜별 일정 카드, 추천 장소 슬라이드, 지도 뷰 등을 활용하여 여행 계획을 직관적으로 보여줍니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-8.jpg" alt="DailyBudget 금융 관리 앱">
+                                <div class="text">
+                                    <span class="title">DailyBudget <span class="category">금융 관리</span></span>
+                                    <span class="detail">수입/지출 내역과 예산 현황을 그래프와 차트로 시각화했습니다. 빠른 입력, 카테고리별 분류, 월간 보고서 등 사용자가 재정 상태를 쉽게 확인하도록 설계했습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-9.jpg" alt="EventHub 이벤트 앱">
+                                <div class="text">
+                                    <span class="title">EventHub <span class="category">이벤트</span></span>
+                                    <span class="detail">공연, 전시, 체험 활동 티켓 구매 및 예약을 중심으로 UI를 구성했습니다. 이벤트 카테고리 필터, 추천 이벤트 슬라이드, QR 티켓 저장 기능을 제공했습니다.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section1-10.jpg" alt="MindSpace 라이프스타일 앱">
+                                <div class="text">
+                                    <span class="title">MindSpace <span class="category">라이프스타일</span></span>
+                                    <span class="detail">명상 가이드, 일일 체크인, 목표 달성 기록 기능을 중심으로 화면을 구성했습니다. 집중 시간 타이머와 진도 시각화를 카드형 UI로 배치하여 사용 몰입도를 높였습니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    <ul class="content">
-                        <li><img src="images/section22_1.jpg" alt=""></li>
-                        <li><img src="images/section22_2.jpg" alt=""></li>
-                        <li><img src="images/section22_3.jpg" alt=""></li>
+            <!-- Section 2: The Way We Work -->
+            <section class="section2" aria-label="우리의 작업 방식">
+                <div class="centerbox">
+                    <div class="content-box">
+                        <div class="textbox">
+                            <h2>The Way</h2>
+                            <h2 class="text-b">We Work.</h2>
+                            <p>우리는 단순히 예쁜 것을 만드는게 아닙니다.</p>
+                            <p>전략적인 사고와 창의적인 실행을 통해 클라이언트의 비즈니스 목표를 달성하는 디자인을 만듭니다.</p>
+                            <p>브랜드의 본질을 발견하고, 그것이 세상과 소통할 수 있도록 디자인 합니다.</p>
+                            <div class="btn-box">
+                                <button class="btn">무료 시안 신청</button>
+                            </div>
+                        </div>
+                        <ul class="content">
+                            <li class="vision-card">
+                                <div class="vision-info">
+                                    <h3 class="vision-name">DISCOVER</h3>
+                                    <p class="vision-desc">브랜드와 시장을 깊이 이해하고 브랜드의 본질을 발견합니다.</p>
+                                </div>
+                                <div class="card-img">
+                                    <img src="images/section2-1.png" alt="" aria-hidden="true">
+                                </div>
+                            </li>
+                            <li class="vision-card">
+                                <div class="vision-info">
+                                    <h3 class="vision-name">DEFINE</h3>
+                                    <p class="vision-desc">명확한 전략과 방향을 설정하여 프로젝트의 목표를 정의합니다.</p>
+                                </div>
+                                <div class="card-img">
+                                    <img src="images/section2-2.png" alt="" aria-hidden="true">
+                                </div>
+                            </li>
+                            <li class="vision-card">
+                                <div class="vision-info">
+                                    <h3 class="vision-name">DESIGN</h3>
+                                    <p class="vision-desc">철저한 조사를 바탕으로 창의적 아이디어를 현실로 구현하여 완성도 높은 결과물을 만듭니다.</p>
+                                </div>
+                                <div class="card-img">
+                                    <img src="images/section2-3.png" alt="" aria-hidden="true">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Web Design Portfolio -->
+            <section class="section3" aria-label="웹 디자인 포트폴리오">
+                <div class="centerbox">
+                    <div class="part2-slidebox swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/section3-1.jpg" alt="웹 디자인 포트폴리오 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3-2.jpg" alt="웹 디자인 포트폴리오 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3-3.jpg" alt="웹 디자인 포트폴리오 3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3-4.jpg" alt="웹 디자인 포트폴리오 4">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3-0.gif" alt="웹 디자인 포트폴리오 5">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="textbox">
+                        <h2>Design</h2>
+                        <h2 class="text-b">Portfolio</h2>
+                        <p>각각의 프로젝트는 고유한 스토리를 가지고 있습니다.</p>
+                        <p>우리는 클라이언트와의 깊이 있는 소통을 통해 브랜드의 진정한 가치를 발견하고, 이를 시각적으로 완벽하게 구현합니다.</p>
+                        <div class="btn-box">
+                            <button class="btn">프로젝트 시작하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Our Clients -->
+            <section class="section4" aria-label="클라이언트">
+                <div class="centerbox">
+                    <h2>Our Clients</h2>
+                    <ul class="clients-list">
+                        <li class="client-card">
+                            <div class="client-info">
+                                <h3 class="client-name">Tech Startup</h3>
+                                <p class="client-desc">혁신적인 기술을 가진 스타트업의 브랜드 아이덴티티 구축부터 웹사이트 런칭까지 전반적인 브랜딩 프로젝트를 성공적으로 완료했습니다.</p>
+                            </div>
+                            <div class="card-img">
+                                <img src="images/section4-1.png" alt="" aria-hidden="true">
+                            </div>
+                        </li>
+                        <li class="client-card">
+                            <div class="client-info">
+                                <h3 class="client-name">Fashion Brand</h3>
+                                <p class="client-desc">럭셔리 패션 브랜드의 리뉴얼 프로젝트로 브랜드 가치를 재정립하고 젊은 고객층에게 어필할 수 있는 새로운 비주얼을 제안했습니다.</p>
+                            </div>
+                            <div class="card-img">
+                                <img src="images/section4-2.png" alt="" aria-hidden="true">
+                            </div>
+                        </li>
+                        <li class="client-card">
+                            <div class="client-info">
+                                <h3 class="client-name">F&amp;B Company</h3>
+                                <p class="client-desc">프리미엄 F&amp;B 브랜드의 패키징 디자인부터 마케팅 캠페인까지 통합 브랜드 경험을 설계하여 시장에서의 성공을 이끌어냈습니다.</p>
+                            </div>
+                            <div class="card-img">
+                                <img src="images/section4-3.png" alt="" aria-hidden="true">
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section3">
-            <div class="big_img"><img src="images/section3_bg.png" alt=""></div>
-            <div class="centerbox">
-                <div class="part2_slidebox swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/section3_1.jpg" alt="">
-                        </div>
-                    
-                        <div class="swiper-slide">
-                            <img src="images/section3_2.jpg" alt="">
-                        </div>
-                    
-                        <div class="swiper-slide">
-                            <img src="images/section3_3.jpg" alt="">
-                        </div>
-                    </div>
+        </div>
 
-                    <div class="btn_box">
-                        <span class="btn_left"><img src="images/btn_left.png" alt=""></span>
-                        <span class="btn_right"><img src="images/btn_right.png" alt=""></span>
-                    </div>
-                </div>
+    </main>
 
-                <div class="textbox">
-                    <h2>Web Design<br>Portfolio</h2>
-                    <p>각각의 프로젝트는 고유한 스토리를 가지고 있습니다.</p>
-                    <p>우리는 클라이언트와의 깊이 있는 소통을 통해 브랜드의 진정한 가치를 발견하고, 이를 시각적으로 완벽하게 구현합니다.</p>
-                    <div class="btn_box">
-                        <a href="#" class="btn">프로젝트 시작하기</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-      
-        
-
-        <section class="section4">
-            <div class="centerbox">
-                <h2>Our Clients</h2>
-
-                <ul class="content">
-                    <li>
-                        <a href="#"><img src="images/section4_1.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/section4_2.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/section4_3.png" alt=""></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
-
+    <!-- Footer -->
     <footer>
         <div class="centerbox">
-            <h1><img src="images/logo.png" alt=""></h1>
-            <div class="info_box">
+            <div class="logo"><img src="images/logo.svg" alt="Essential Studio 로고"></div>
+            <div class="info-box">
                 <ul>
                     <li>회사소개</li>
                     <li>이용약관</li>
                     <li>개인정보취급방침</li>
                     <li>이용안내</li>
                 </ul>
-            
                 <ul>
                     <li>고객상담 대표번호</li>
-                    <li><a href="#">080-550-8308~9</a></li>
+                    <li><a href="tel:0905518200">090-551-8200</a></li>
                 </ul>
-            
                 <ul>
-                    <li>서울시 강남구 봉은사로 114길 12(삼성동)</li>
-                    <li>TEL <a href="#">02)550-8800</a></li>
-                    <li>대표이사 이창재, 박성수</li>
+                    <li>서울시 성동구 성수동2가 300-1</li>
+                    <li>TEL <a href="tel:025518200">02)551-8200</a></li>
+                    <li>대표이사 김성수</li>
                 </ul>
-            
                 <ul>
-                    <li>Copyrightⓒ 2025 ESSENTIAL CO.,LTD. All rights reserved.</li>
+                    <li>Copyright&copy; 2025 ESSENTIAL CO.,LTD. All rights reserved.</li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="script/jquery-3.7.1.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/action.js"></script>
 
-    <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".visual", {
-      spaceBetween: 30,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      effect: "fade",
-    
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-    var swiper = new Swiper(".part1_slidebox", {
-      
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-                nextEl: ".btn_right",
-                prevEl: ".btn_left",
-      },
-      loop: true,
-      
-      slidesPerView: 1,   // 기본 (모바일)
-        spaceBetween: 30,
-
-        // 반응형 옵션
-        breakpoints: {
-            640: {  // 화면이 640px 이상일 때
-            slidesPerView: 2,
-            spaceBetween: 20,
-            },
-            1024: { // 화면이 1024px 이상일 때
-            slidesPerView: 3,
-            spaceBetween: 25,
-            },
-            1440: { // 화면이 1440px 이상일 때
-            slidesPerView: 4,
-            spaceBetween: 30,
-            },
-        },
-    });
-
-     var swiper = new Swiper(".part2_slidebox", {
-      slidesPerView: 1,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-                nextEl: ".btn_right",
-                prevEl: ".btn_left",
-      },
-      loop: true,
-        
-    }
-    
-    )
-  </script>
-
 </body>
+
 </html>
