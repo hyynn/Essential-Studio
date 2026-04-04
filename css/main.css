@@ -24,8 +24,10 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
 .cursor-follower {
@@ -36,8 +38,10 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: left 0.08s ease, top 0.08s ease, transform 0.15s ease, width 0.3s ease, height 0.3s ease;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  transition: transform 0.08s ease, width 0.3s ease, height 0.3s ease;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }

@@ -119,10 +119,8 @@ const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
 
 document.addEventListener('mousemove', function (e) {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    follower.style.left = e.clientX + 'px';
-    follower.style.top = e.clientY + 'px';
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
 document.addEventListener('mousedown', function () {
