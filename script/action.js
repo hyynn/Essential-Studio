@@ -118,10 +118,26 @@ window.addEventListener('load', function () {
 const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
 
+let mouseX = 0, mouseY = 0;
+let followerX = 0, followerY = 0;
+
 document.addEventListener('mousemove', function (e) {
-    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
 });
+
+function animateFollower() {
+    /* follower가 목표 위치로 조금씩 이동 — 0.15가 딜레이 강도 */
+    followerX += (mouseX - followerX) * 0.15;
+    followerY += (mouseY - followerY) * 0.15;
+    follower.style.left = followerX + 'px';
+    follower.style.top = followerY + 'px';
+    requestAnimationFrame(animateFollower);
+}
+
+animateFollower();
 
 document.addEventListener('mousedown', function () {
     cursor.classList.add('click');
