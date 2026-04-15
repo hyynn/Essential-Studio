@@ -2,9 +2,9 @@
 :root {
   --bgC: #FBFAF9;
   --pointC: #4A6FA5;
-  --textC1: #1a1a1a;
-  --textC2: #3a3a3a;
-  --textC3: #5a5a5a;
+  --textC1: #1A1A1A;
+  --textC2: #3A3A3A;
+  --textC3: #5A5A5A;
   --white: #FFFFFF;
   --glass-border: rgba(255, 255, 255, 0.3);
   --glass-shadow-sm: 0 1px 2px 0 rgba(1, 2, 61, 0.37);
@@ -79,7 +79,7 @@ body {
   align-items: center;
 }
 .logo img {
-  width: clamp(80px, 14.6vw, 280px);
+  width: clamp(100px, 14.6vw, 280px);
 }
 
 header {
@@ -998,6 +998,17 @@ footer .info-box ul:last-child {
   }
 }
 @media (max-width: 480px) {
+  header {
+    padding: 0;
+  }
+  header .topmenu a,
+  header .topmenu button {
+    font-size: 1.4rem;
+    padding: 1.6em 0.8em;
+  }
+  header .hamburger {
+    padding: 1em;
+  }
   .search-box {
     top: 140px;
     height: 50px;
